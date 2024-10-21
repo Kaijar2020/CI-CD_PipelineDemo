@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ConditionalMethods {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //launch the browser (chrome)
         WebDriver driver = new ChromeDriver();
@@ -22,16 +22,23 @@ public class ConditionalMethods {
         //isDisplay()-- method.
         WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
         System.out.println(logo.isDisplayed());
+        Thread.sleep(4000);
 
         //isEnable --method
         WebElement status = driver.findElement(By.xpath("//input[@id='Firstname']"));
         System.out.println(status.isEnabled());
+        Thread.sleep(4000);
 
         //isSelected() --method
         WebElement selectedStatus = driver.findElement(By.xpath("//input[@id='gender-female']"));
         System.out.println(selectedStatus.isSelected());
         selectedStatus.click();
         System.out.println(selectedStatus.isSelected());
+        Thread.sleep(5000);
+
+        //close the browser.
+        driver.close(); //this command will close single browser window. Which tab driver is active.
+        //driver.quit(); //will close all the browser window.
 
     }
 }
