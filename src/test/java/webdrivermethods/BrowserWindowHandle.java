@@ -50,6 +50,15 @@ public class BrowserWindowHandle {
                System.out.println(driver.getCurrentUrl());
            }
         }
+        //Close specific browser
+        for(String winId:windowIds){
+            String title=driver.switchTo().window(winId).getTitle();
+            System.out.println(title);
+            if (title.equals("OrangeHRM")){
+                driver.close();
+                break;
+            }
+        }
         driver.quit();
     }
 }
