@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class IframeHandle {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://ui.vision/demo/webtest/frames ");
         driver.manage().window().maximize();
@@ -42,5 +42,14 @@ public class IframeHandle {
         //Switch to default Page/root page
         driver.switchTo().defaultContent();
 
+        //Switch to the frame -5
+        WebElement frame5 = driver.findElement(By.xpath("//frame[@src='frame_5.html']"));
+        driver.switchTo().frame(frame5);
+
+        driver.findElement(By.xpath("//a[normalize-space()='https://a9t9.com']")).click();
+        Thread.sleep(2000);
+        System.out.println(driver.findElement(By.xpath("//img[@alt='UI Vision by a9t9 software - Image-Driven Automation']")).isDisplayed());
+
+        driver.close();
     }
 }
