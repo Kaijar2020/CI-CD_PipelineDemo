@@ -68,7 +68,8 @@ public class ExcellUtils {
         workBook = new XSSFWorkbook(fileIn);
         sheet = workBook.getSheet(xlsheet);
         row = sheet.getRow(rowNum);
-        cell = row.getCell(colmNum);
+        cell = row.createCell(colmNum);
+        cell.setCellValue(data);
         fileOut = new FileOutputStream(xlfile);
         workBook.write(fileOut);
         workBook.close();
