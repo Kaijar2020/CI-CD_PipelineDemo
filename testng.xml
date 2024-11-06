@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/Java_Program/seleniumWebdriver/src/test/java/testngpractice/AllAnnotations.java">
+        <classes>
+            <class name="testngpractice.AllAnnotations">
+                <methods>
+                    <include name="test_methodOne"/>
+                    <include name="test_methodTwo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
