@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- parallel = "tests" this is use for parallel execution.-->
+
+<suite name="All Test Suite" parallel="tests">
+    <test thread-count = "5" name= "Test on Edge">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="testngpractice.ParallelTest"/>
+        </classes>
+    </test>
+
+    <test thread-count = "5" name= "Test on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testngpractice.ParallelTest"/>
+        </classes>
+    </test>
+
+    <test thread-count = "5" name= "Test on Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="testngpractice.ParallelTest"/>
+        </classes>
+    </test>
+
+</suite>

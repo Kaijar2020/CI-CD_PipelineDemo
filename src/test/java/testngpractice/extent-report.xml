@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <listeners>
-        <listener class-name="testngpractice.MyListener"/>
+        <listener class-name="testngpractice.ExtentReportManager"/>
     </listeners>
 
-    <test verbose="2" preserve-order="true" name="E:/Java_Program/seleniumWebdriver/src/test/java/testngpractice/OrangeHRMTest.java">
+    <test verbose="2" preserve-order="true" name="OrangeHRMTest">
         <classes>
             <class name="testngpractice.OrangeHRMTest"/>
         </classes>
